@@ -1,0 +1,133 @@
+<!-- 4-13~4-21에서 사용된 스타일을 응용하여 html 파일(디자인한 홈페이지) 작성
+  -> 완성 후 이미지 우선 전송(화면 캡처), 이미지 전송 시 파일명을 본인 이름
+  -> 시간적 여유가 있을 경우 (2)번의 자바스크립트도 적용해 볼것 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>초등학교 게시판</title>
+  <script>
+    function createStamp() {
+      var obj = document.getElementById("bottom");
+      var newStamp = document.createElement("stamp");
+      newStamp.innerHTML = "<img id='clab' src='img/clab.png' alt='과학상상화'>";
+      newStamp.setAttribute("id", "clab");
+      newStamp.onclick = function () {
+        var p = this.parentElement;
+        p.removeChild(this);
+      }
+      obj.appendChild(newStamp);
+    }
+  </script>
+  <style>
+    body {
+      color: #2d4c36;
+      /*테두리나 글자색은 
+      이걸 기본으로 지정하자 */
+      background: #105c42;
+      text-align: center;
+    }
+    #header{
+      margin-top: 30px;
+    }
+    #info {
+      background: white;
+      width: 400px;
+      padding: 20px;
+
+      border-width: 5px;
+      border-radius: 50px;
+      border-style: solid;
+
+      font-weight: 900;
+      font-size: 2em;
+
+      margin: auto;
+    }
+
+    #title {
+      text-shadow: -5px 0 #15306a, 0 5px #15306a, 5px 0 #15306a, 0 -5px #15306a;
+
+      color: white;
+      font-size: 100px;
+    }
+
+    #section button {
+      width: 200px;
+      text-align: center;
+      border: 5px solid #2d4c36;
+    }
+
+    #btn_1 {
+      margin-right: 20px;
+    }
+
+    #btn_2 {
+      margin-right: 20px;
+    }
+
+    #board {
+      display: inline-block;
+
+      width: 800px;
+      height: 800px;
+      margin: 0 auto 30px;
+      padding: 0px 20px 50px;
+      border: 20px ridge #b17642;
+
+      background: #71a096;
+    }
+    #clab{
+      width:100px;
+    }
+    .name {
+      font-size: 40px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .photo img {
+      cursor: pointer;
+
+      width: 350px;
+      margin: 0 15px 30px;
+
+      border: 5px solid white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h2 id="info">슬기로운 6학년 3반</h2>
+    <strong id="title">
+      <span style=color:red>행</span>
+      <span style=color:orange>복</span>
+      <span style=color:yellow>한</span>
+      <span style=color:green>우</span>
+      <span style=color:#1b83a1>리</span>
+      <span style=color:#135a90>반</span>
+    </strong>
+  </div>
+  <div id="section">
+    <button id="btn_1"><b>우리들의 소식</b></button>
+    <button id="btn_2"><b>오늘의 급식</b></button>
+    <button id="btn_3"><b>사진첩</b></button>
+  </div>
+  <div id="board" style="margin-top: 30px;">
+    <p class="name">|과학 상상화 그리기 우수작|</p>
+    <div class="photo">
+      <img src="img/1.jpg" alt="과학상상화">
+      <img src="img/2.jpg" alt="과학상상화">
+      <img src="img/3.jpg" alt="과학상상화">
+      <img src="img/4.jpg" alt="과학상상화">
+    </div>
+    <div id="bottom">
+      <a href="javascript:createStamp()">도장 찍어주기</a><br>
+    </div>
+  </div>
+</body>
+</html>
