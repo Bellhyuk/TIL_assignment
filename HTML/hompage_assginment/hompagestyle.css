@@ -1,0 +1,120 @@
+body {
+  color: white;
+  /*테두리나 글자색은 
+  이걸 기본으로 지정하자 */
+  background: #105c42;
+  text-align: center;
+}
+header {
+  color: #2d4c36;
+  margin-top: 30px;
+}
+#info {
+  background: white;
+  width: 400px;
+  padding: 10px;
+
+  border-width: 5px;
+  border-radius: 50px;
+  border-style: solid;
+
+  font-weight: 900;
+  font-size: 2em;
+
+  margin: auto;
+}
+#info span{
+  border-width: 3px;
+  border-radius: 50px;
+  border-style: solid;
+
+  padding: 2px 55px;
+}
+#title {
+  text-shadow: -5px 0 #15306a, 0 5px #15306a, 5px 0 #15306a, 0 -5px #15306a;
+
+  color: white;
+  font-size: 100px;
+}
+#title span{
+  position: relative;
+}
+@keyframes wave{
+  0% {top: 0px;}
+  100% {top: 10px;}
+}
+#title_1{
+  animation: wave 1s linear 1s infinite alternate;
+}
+#title_2{
+  animation: wave 1s linear 1.2s infinite alternate;
+}
+#title_3{
+  animation: wave 1s linear 1.4s infinite alternate;
+}
+#title_4{
+  animation: wave 1s linear 1.6s infinite alternate;
+}
+#title_5{
+  animation: wave 1s linear 1.8s infinite alternate;
+}
+#title_6{
+  animation: wave 1s linear 2s infinite alternate;
+}
+
+#menubar{
+  width: 820px;
+  height: 30px;
+  padding: 0 30px;
+  margin: 0 auto;
+  background: #B17642;
+}
+#menubar ul{
+  position: relative;
+  top: 10px;
+  left: -15px;
+}
+#menubar ul li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+  padding: 0px 15px;
+}
+#menubar ul li a{
+  color: white;
+  text-decoration: none;
+}
+#menubar ul li a:hover{
+  color:#5D3E22;
+}
+
+section {
+  display: block;
+
+  width: 800px;
+  height: 800px;
+  margin: 0px auto 30px;
+  padding: 0px 20px;
+  border: 20px ridge #b17642;
+
+  background: #71a096;
+}
+#clab{
+  width:100px;
+}
+.name {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+}
+.photo img {
+  cursor: pointer;
+
+  width: 350px;
+  margin: 0 15px 30px;
+
+  border: 5px solid white;
+}
+table {
+  position: relative;
+}

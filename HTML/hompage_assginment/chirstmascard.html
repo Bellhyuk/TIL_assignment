@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9th</title>
+</head>
+<body>
+  <h3>크리스마스 카드</h3>
+  <hr>
+  <canvas id = "myCanvas" width="600" height="500" style="background-color:red"></canvas>
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+    //카드 겉지
+    context.beginPath();
+    for(var i=0;i<10;i++){
+      context.moveTo(-50,10+(i*120));
+      context.lineTo(10+(i*120),-50);
+      context.lineWidth=40;
+      context.strokeStyle = "green";
+      context.stroke();
+    }
+    //카드 속지
+    context.fillStyle="cornsilk";
+    context.fillRect(30,30,540,440);
+
+    //눈 내림 배경
+    for(var i=0;i<100;i++){
+      context.beginPath();
+      context.arc(Math.floor(Math.random()*531)+35, Math.floor(Math.random()*431)+35, 5, 0, 2*Math.PI, false);
+      context.fillStyle = "white";
+      context.fill();
+    }
+    //눈 쌓임 배경
+    context.beginPath();
+    context.arc(300,1000,595,(173/128)*Math.PI,(211/128)*Math.PI,false);
+    context.fillStyle = "white";
+    context.fill();
+
+    //선물상자
+    context.beginPath();
+    context.rect(100,350,100,100);
+    context.fillStyle = "green";
+    context.fill();
+    context.strokeStyle = "red";
+    context.lineWidth =5;
+    context.stroke();
+    //세로줄
+    context.beginPath();
+    context.rect(140,350,20,100);
+    context.fillStyle = "red";
+    context.fill();
+    //가로줄
+    context.beginPath();
+    context.rect(100,390,100,20);
+    context.fillStyle = "red";
+    context.fill();
+    //리본
+    context.beginPath();
+    context.strokeStyle = "magenta";
+    context.arc(120,350,30,0,1.5*Math.PI,true);
+    context.lineWidth = 3;
+    context.stroke();
+    context.beginPath();
+    context.strokeStyle = "magenta";
+    context.arc(150,320,30,Math.PI,0.5*Math.PI,true);
+    context.lineWidth = 3;
+    context.stroke();
+    context.beginPath();
+    context.strokeStyle = "magenta";
+    context.arc(180,350,30,1.5*Math.PI,Math.PI,true);
+    context.lineWidth = 3;
+    context.stroke();
+    context.beginPath();
+    context.strokeStyle = "magenta";
+    context.arc(150,320,30,0.5*Math.PI,0,true);
+    context.lineWidth = 3;
+    context.stroke();
+
+    //올라프 이미지
+    var img = new Image();
+    img.onload = function(){
+      context.drawImage(img, 200, 190, 200, 262);
+    }
+    img.src = "img/pngegg.png";
+
+    //텍스트 넣기
+    context.font="60px forte";
+    context.strokeStyle = "gold";
+    context.lineWidth = 5;
+    context.strokeText("Merry Christmas", 80, 120);
+    context.fillStyle ="red";
+    context.fillText("Merry Christmas", 80, 120);
+  </script>
+</body>
+</html>
