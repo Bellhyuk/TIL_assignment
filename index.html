@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>초등학교 게시판</title>
+  <link type="text/css" rel="stylesheet" href="hompagestyle.css">
+  <script src="hompagescript.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2 id="info"><span>슬기로운 6학년 3반</span></h2>
+    <strong id="title">
+      <span id="title_1" style=color:red>행</span>
+      <span id="title_2" style=color:orange>복</span>
+      <span id="title_3" style=color:yellow>한</span>
+      <span id="title_4" style=color:green>우</span>
+      <span id="title_5" style=color:#1b83a1>리</span>
+      <span id="title_6" style=color:#135a90>반</span>
+    </strong>
+  </header>
+
+  <nav id="menubar">
+    <ul>
+      <li><a href="javascript:update()">우리들의 소식</a></li>
+      <li><a href="javascript:lunch()">오늘의 급식</a></li>
+      <li><a href="javascript:photo()">사진첩</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div id="board_lunch" style="display:none">
+      <table>
+        <tr>
+          <th colspan="2" align="center">요일</th>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+        </tr>
+        <tbody style="text-align: center;">
+          <thread>
+            <tr>
+              <td colspan="2">날짜</td>
+              <td colspan="4">올바른 식생활 방법</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td rowspan="2">1주</td>
+              <td>간식</td>
+              <td colspan="4" rowspan="2"></td>
+              <td>시리얼/우유/두유<br>닭칼국수</td>
+            </tr>
+            <tr>
+              <td>중식</td>
+              <td>혼합잡곡밥<br>북어미역국<br>돈육불고기<br>고들배기무침배추김치/과일/쌈채소</td>
+            </tr>
+          </thread>
+          <thread>
+            <tr>
+              <td colspan="2">날짜</td>
+              <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2주</td>
+              <td>간식</td>
+              <td>시리얼/우유/두유<br>양지떡국</td>
+              <td>시리얼/우유/두유<br>감자만두</td>
+              <td>시리얼/우유/두유<br>메밀면채소무침</td>
+              <td>시리얼/우유/두유<br>베이컨채소볶음밥</td>
+              <td>시리얼/우유/두유<br>피자빵</td>
+            </tr>
+            <tr>
+              <td>중식</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </thread>
+        </tbody>
+      </table>
+    </div>
+    <div id="board_photo">
+      <p class="name">|과학 상상화 그리기 우수작|</p>
+      <div class="photo">
+        <img src="img/photoboard-photo1.jpg" alt="과학상상화">
+        <img src="img/photoboard-photo2.jpg" alt="과학상상화">
+        <img src="img/photoboard-photo3.jpg" alt="과학상상화">
+        <img src="img/photoboard-photo4.jpg" alt="과학상상화">
+      </div>
+      <div id="bottom">
+        <a href="javascript:createStamp()">칭찬해주기</a>
+        <span id="mySpan">이미지 크기</span><br>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright © 2020 Bellhyuk. All rights reserved.</p>
+    <address>
+      Contact webmaster for more information.<br>
+
+    </address>
+  </footer>
+</body>
+</html>
